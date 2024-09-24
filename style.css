@@ -393,6 +393,7 @@
     text-align: center;
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
+    width: 40%;
 }
 
 @media screen and (max-width: 1090px)
@@ -462,7 +463,7 @@
     {
         font-size: 16px;
         padding: 21px 30px;
-        margin: 0;
+        width: 30%;
     }
 }
 
@@ -491,6 +492,7 @@
     .banner__input--button
     {
         margin: 20px 0 0 0;
+        width: 70%;
     }
 
     .banner__input--location
