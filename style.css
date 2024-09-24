@@ -188,11 +188,13 @@
     font-size: 16px;
     font-weight: 700;
     text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
     color:rgba(66, 66, 66, 1);
 
     position: absolute;
     z-index: -1;
-    left: 20px;
+    left: 10px;
     bottom: 0;
     opacity: 0;
     transition: all 0.5s;
@@ -253,5 +255,247 @@
     .navbar__logo--g
     {
         font-size: 17.5px;
+    }
+}
+
+/*************************** Banner ************************************/
+
+.banner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 179, 14, 1);
+    width: 100%;
+    padding: 40px 40px 0 40px;
+}
+
+.banner img
+{
+    padding: 0 0 0 40px;
+    align-self: flex-end;
+}
+
+.banner__content
+{
+    padding: 0 0 70px 0;
+}
+
+.banner__content--heading
+{
+    font-family: var(--source-sans-pro);
+    font-size: 88px;
+    font-weight: 700;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.banner__content--description
+{
+    font-family: var(--source-sans-pro);
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(80, 79, 79, 1);
+    margin: 30px 0;
+}
+
+.banner__delivery
+{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+}
+
+.banner__delivery hr
+{
+    border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.banner__d-type
+{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.banner__d-type--button
+{
+    font-family: var(--source-sans-pro);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(117, 117, 117, 1);
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.banner__d-type--active
+{
+    background-color: rgba(241, 114, 40, 0.1);
+    color: rgba(241, 114, 40, 1);
+}
+
+.banner__input
+{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.banner__input--location
+{
+    position: absolute;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: left;
+    color: rgba(255, 116, 116, 1);
+    left: 35px;
+    bottom: 45px;
+}
+
+.banner__input--field
+{
+    font-family: var(--open-sans);
+    background-color: rgba(245, 245, 245, 1);
+    border: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 60%;
+}
+
+.banner__input--field::placeholder
+{
+    font-family: var(--open-sans);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 0 0 10px;
+    color: rgba(158, 158, 158, 1);
+}
+
+.banner__input--button
+{
+    font-family: var(--source-sans-pro);
+    background-image: linear-gradient(95.71deg, #FF7A7A -39.64%, #F75900 135.31%);
+    border: none;
+    border-radius: 8px;
+    padding: 20px 30px;
+    margin: 0 0 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1090px)
+{
+    .banner
+    {
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+    }
+
+    .banner__content
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner img
+    {
+        /* width: 100%; */
+        padding: 0;
+        margin: 30px 0 0 0;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .banner__content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner__content--heading
+    {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .banner__content--description
+    {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .banner__delivery
+    {
+        width: 80%;
+    }
+
+    .banner__d-type
+    {
+        justify-content: center;
+    }
+
+    .banner__input--field
+    {
+        width: 70%;
+    }
+
+    .banner__input--field::placeholder
+    {
+        font-size: 14px;
+    }
+
+    .banner__input--button
+    {
+        font-size: 16px;
+        padding: 21px 30px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .banner__content--heading
+    {
+        font-size: 32px;
+    }
+
+    .banner__delivery
+    {
+        width: 100%;
+    }
+
+    .banner__input
+    {
+        flex-direction: column;
+    }
+
+    .banner__input--field
+    {
+        width: 100%;
+    }
+
+    .banner__input--button
+    {
+        margin: 20px 0 0 0;
+    }
+
+    .banner__input--location
+    {
+        bottom: 0;
+        top: 35px;
     }
 }
