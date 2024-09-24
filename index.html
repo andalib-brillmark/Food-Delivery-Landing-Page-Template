@@ -7,21 +7,56 @@
     <meta name="description" content="FoodWagon">
     <meta name="keywords" content="FoodWagon, Food, Wagon, FoodWagon.com">
     
+    <link rel="stylesheet" href="splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>FoodWagon</title>
 </head>
 <body>
     <header>
-        <nav class="">
-            <div class="logo">
+        <!-- Navbar for PC -->
+        <nav class="navbar-pc">
+            <a class="navbar__logo" href="">
                 <img src="images/foodwagon_icon.png" alt="FoodWagon Icon">
-                <h1><a href="index.html">FoodWagon</a></h1>
+                <span class="navbar__logo--first-word">food</span>
+                <span class="navbar__logo--second-word">wa<span class="navbar__logo--g">G</span>on</span>
+            </a>
+
+            <p class="navbar__details">
+                <span class="navbar__details--deliver">Deliver to: </span>
+                <em class="fa fa-map-marker"></em>
+                <span class="navbar__details--current">Current Location</span>
+                <span class="navbar__details--address">Mohammadpur Bus Stand, Dhaka</span>
+            </p>
+
+            <div class="navbar__button">
+                <button class="navbar__search"><em class="fa fa-search"></em> Search Food</button>
+                <button class="navbar__login"><em class="fa fa-user"></em> Login</button>
+            </div>
+        </nav>
+
+        <!-- Navbar for Mobile -->
+        <nav class="navbar-mobile">
+            <button class="navbar-mobile__details"><em class="fa fa-map-marker"></em></button>
+            <span class="navbar-mobile__details--address">Mohammadpur Bus Stand, Dhaka</span>
+
+            <a class="navbar__logo" href="">
+                <img src="images/foodwagon_icon.png" alt="FoodWagon Icon">
+                <span class="navbar__logo--first-word">food</span>
+                <span class="navbar__logo--second-word">wa<span class="navbar__logo--g">G</span>on</span>
+            </a>
+
+            <div>
+                <button class="navbar__search"><em class="fa fa-search"></em></button>
+                <button class="navbar__login"><em class="fa fa-user"></em></button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="banner"></section>
+        <section class="banner">
+
+        </section>
 
         <section class="flash-deals"></section>
 
@@ -46,6 +81,7 @@
 
     </footer>
 
+    <script src="splide-4.1.3/dist/js/splide.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 </body>

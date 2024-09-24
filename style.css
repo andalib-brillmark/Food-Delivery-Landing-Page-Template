@@ -3,3 +3,255 @@
 
 /********** Source Sans Pro ***********/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/********** Global ***********/
+:root
+{
+    --open-sans: 'Open Sans', sans-serif;
+    --source-sans-pro: 'Source Sans 3', sans-serif;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********** Navbar ***********/
+
+.navbar-pc
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar__logo
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo img
+{
+    padding: 0 10px 0 0;
+}
+
+.navbar__logo--first-word
+{
+    font-family: var(--source-sans-pro);
+    font-size: 31.11px;
+    font-weight: 700;
+    line-height: 37.33px;
+    letter-spacing: -0.025em;
+    text-align: center;
+    color: rgba(241, 114, 40, 1);
+}
+
+.navbar__logo--second-word
+{
+    font-family: var(--source-sans-pro);
+    font-size: 29.11px;
+    font-weight: 700;
+    line-height: 37.33px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(255, 179, 14, 1);
+}
+
+.navbar__logo--g
+{
+    font-size: 23.5px;
+}
+
+.navbar__details
+{
+    padding: 0 10px;
+}
+
+.navbar__details--deliver
+{
+    font-family: var(--source-sans-pro);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(66, 66, 66, 1);
+}
+
+.navbar__details em, .navbar-mobile__details em
+{
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25.2px;
+    text-align: center;
+    padding: 0 5px;
+    color: rgba(255, 179, 14, 1);
+}
+
+.navbar__details--current
+{
+    font-family: var(--open-sans);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: center;
+    color:rgba(66, 66, 66, 1);
+}
+
+.navbar__details--address
+{
+    font-family: var(--open-sans);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: center;
+    color:rgba(66, 66, 66, 1);
+}
+
+.navbar__search
+{
+    font-family: var(--source-sans-pro);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color:rgba(66, 66, 66, 1);
+    background-color: transparent;
+    border: none;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+.navbar__search em
+{
+    color: rgba(255, 179, 14, 1);
+    padding: 0 5px;
+}
+
+.navbar__login
+{
+    font-family: var(--source-sans-pro);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color:rgba(255, 184, 0, 1);
+
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 0 0 0 5px;
+    box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29);
+    box-shadow: 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+    cursor: pointer;
+}
+
+.navbar__login em
+{
+    color: rgba(255, 184, 0, 1);
+    padding: 0 5px;
+}
+
+.navbar-mobile
+{
+    display: none;
+}
+
+.navbar-mobile em
+{
+    font-size: 18px;
+}
+
+.navbar-mobile .navbar__login
+{
+    padding: 0;
+    box-shadow: none;
+}
+
+.navbar-mobile__details
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-mobile__details--address
+{
+    font-family: var(--open-sans);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color:rgba(66, 66, 66, 1);
+
+    position: absolute;
+    z-index: -1;
+    left: 20px;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+ 
+.navbar__details--active
+{
+    z-index: 1;
+    opacity: 1;
+    bottom: -25px;
+}
+
+@media screen and (max-width: 1090px)
+{
+    .navbar-pc
+    {
+        padding: 10px;
+    }   
+
+    .navbar__details--deliver, .navbar__details--current
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .navbar-pc
+    {
+        display: none;
+    }
+
+    .navbar-mobile
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 1);
+        position: relative;
+    }
+
+    .navbar__logo img
+    {
+        width: 30px;
+    }
+
+    .navbar__logo--first-word
+    {
+        font-size: 24px;
+    }
+
+    .navbar__logo--second-word
+    {
+        font-size: 22px;
+    }
+
+    .navbar__logo--g
+    {
+        font-size: 17.5px;
+    }
+}
