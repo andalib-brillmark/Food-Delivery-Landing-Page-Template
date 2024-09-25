@@ -514,7 +514,7 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
-    padding: 40px 40px 0 40px;
+    padding: 40px;
 }
 
 .flash-deals__container
@@ -611,6 +611,11 @@
     {
         grid-template-columns: auto auto;
     }
+
+    .flash-deals__container:first-child, .flash-deals__container:last-child
+    {
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 800px)
@@ -632,5 +637,114 @@
     {
         text-align: center;
         margin: 0 0 20px 0;
+    }
+}
+
+/******** How does it work section ********/
+
+.how-does-it-work
+{
+    background-image: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+    padding: 40px 80px;
+}
+
+.how-does-it-work__heading
+{
+    font-family: var(--source-sans-pro);
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 48.16px;
+    text-align: center;
+    color: rgba(241, 114, 40, 1);
+    margin: 20px 0 40px 0;
+}
+
+.how-does-it-work__features
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: start;
+}
+
+.how-does-it-work__container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.how-does-it-work__container:first-child
+{
+    padding: 10px 10px 10px 0;
+}
+
+.how-does-it-work__container:last-child
+{
+    padding: 10px 0 10px 10px;
+}
+
+.how-does-it-work__title
+{
+    font-family: var(--source-sans-pro);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: center;
+    color: rgba(67, 67, 67, 1);
+    padding: 5px 0;
+}
+
+.how-does-it-work__description
+{
+    font-family: var(--open-sans);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: center;
+    color: rgba(158, 158, 158, 1);
+}
+
+@media screen and (max-width: 1090px)
+{
+    .how-does-it-work
+    {
+        padding: 20px 60px;
+    }
+
+    .how-does-it-work__heading
+    {
+        font-size: 32px;
+        margin: 20px 0 30px 0;
+    }
+
+    .how-does-it-work__container:first-child, .how-does-it-work__container:last-child
+    {
+        padding: 10px;
+    }
+
+    .how-does-it-work__features
+    {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .how-does-it-work
+    {
+        padding: 20px 40px;
+    }
+
+    .how-does-it-work__heading
+    {
+        margin: 10px 0;
+    }
+
+    .how-does-it-work__features
+    {
+        grid-template-columns: auto;
+        justify-content: center;
     }
 }
