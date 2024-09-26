@@ -1103,7 +1103,7 @@
 
 .details__container img
 {
-    width: 50%;
+    width: 60%;
     align-self: stretch;
     border-radius: 0 16px 16px 0;
 }
@@ -1205,6 +1205,7 @@
     .details__description
     {
         text-align: center;
+        margin: 20px 0 60px 0;
     }
 
     .details__title br
