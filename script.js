@@ -25,4 +25,22 @@ $(document).ready(function() {
             }
         }
     }).mount();
+
+    let searchFoodSlider = new Splide(".search-by-food", {
+        type       : 'loop',
+        perPage    : 6,
+        perMove    : 1,
+        pagination : false,
+        breakpoints: {
+            1090: {
+                perPage: 3
+            },
+            800: {
+                perPage: 2
+            },
+            540: {
+                perPage: 1
+            }
+        }
+    }).mount();
 });
