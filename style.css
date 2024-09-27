@@ -909,7 +909,7 @@
     opacity: 1;
     width: max-content;
     height: auto;
-    padding: 15px;
+    padding: 15px 17px;
 }
 
 .popular-items__slider--button-left em, .popular-items__slider--button-right em
@@ -1019,11 +1019,6 @@
     align-items: flex-start;
     margin: 10px 0 40px 0;
 }
-
-/* .featured-restaurants__details img
-{
-    align-self: flex-start;
-} */
 
 .featured-restaurants__name
 {
@@ -1914,7 +1909,7 @@ footer hr
 
 .footer__top
 {
-    margin: 0 0 30px 0;
+    margin: 0 0 80px 0;
 }
 
 .footer__cities
@@ -1935,7 +1930,7 @@ footer hr
     line-height: 18px;
     text-align: left;
     color: rgba(245, 245, 245, 1);
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .footer__link-set--name a
@@ -2118,63 +2113,26 @@ footer hr
         padding: 20px var(--side-small-padding);
     }
 
-    .footer__top
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer__top--heading
-    {
-        text-align: center;
-    }
-
     .footer__middle
     {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .footer__links
     {
         margin: 0 0 20px 0;
         width: 100%;
-        justify-content: center;
-    }
-
-    .footer__link-set
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 33%;
-    }
-
-    .footer__cities--name
-    {
-        text-align: center;
-    }
-
-    .footer__link-set--heading, .footer__link-set--name
-    {
-        text-align: center;
     }
 
     .footer__contact
     {
-        align-self: center;
-        justify-content: center;
-        align-items: center;
         margin: 20px 0 0 0;
+        width: 100%;
     }
 
-    .footer__contact--subscribe
+    .footer__input--field
     {
-        text-align: center;
+        width: 80%;
     }
 }
 
@@ -2183,6 +2141,11 @@ footer hr
     footer
     {
         padding: 20px var(--side-sub-padding);
+    }
+
+    .footer__cities--name, .footer__link-set--heading, .footer__link-set--name
+    {
+        text-align: center;
     }
 
     .footer__top
@@ -2212,6 +2175,15 @@ footer hr
     .footer__cities--name
     {
         margin: 5px 0;
+    }
+
+    .footer__link-set
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
     }
 
     .footer__input
@@ -2255,6 +2227,9 @@ footer hr
     .footer__contact
     {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
