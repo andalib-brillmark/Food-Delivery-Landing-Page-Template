@@ -162,8 +162,7 @@
     border-radius: 8px;
     padding: 15px 20px;
     margin: 0 0 0 5px;
-    box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29);
-    box-shadow: 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+    box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
     cursor: pointer;
 }
 
@@ -282,17 +281,29 @@
     background-color: rgba(255, 179, 14, 1);
     width: 100%;
     padding: var(--side-padding) var(--side-padding) 0 var(--side-padding);
+    position: relative;
 }
 
-.banner img
+.banner__main
 {
     padding: 0 0 0 40px;
     align-self: flex-end;
+    max-width: 50%;
+    /* z-index: 2; */
+    /* box-shadow: 10px 0 20px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.banner__shadow
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .banner__content
 {
-    padding: 0 0 70px 0;
+    margin: 0 0 100px 0;
 }
 
 .banner__content--heading
@@ -415,28 +426,13 @@
 {
     .banner
     {
-        /* flex-direction: column;
-        padding: var(--side-small-padding) var(--side-small-padding) 0 var(--side-small-padding); */
-        
         flex-direction: column-reverse;
         padding: 0 var(--side-small-padding) var(--side-small-padding) var(--side-small-padding);
     }
 
-    .banner__content
+    .banner__main
     {
-        width: 100%;
         padding: 0;
-    }
-
-    .banner img
-    {
-        /* padding: 0;
-        margin: 30px 0 0 0;
-        max-width: 100%;
-        align-self: center; */
-
-        padding: 0;
-        margin: 0 0 30px 0;
         transform: rotate(180deg);
         max-width: 100%;
         align-self: center;
@@ -448,6 +444,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        margin: 0 0 30px 0;
     }
 
     .banner__content--heading
@@ -494,7 +492,6 @@
 {
     .banner
     {
-        /* padding: var(--side-sub-padding) var(--side-sub-padding) 0 var(--side-sub-padding); */
         padding: 0 var(--side-sub-padding) var(--side-sub-padding) var(--side-sub-padding);
     }
 
@@ -640,7 +637,7 @@
     .flash-deals
     {
         grid-template-columns: auto auto;
-        padding:  calc(var(--side-small-padding) - 10px);
+        padding: 50px  calc(var(--side-small-padding) - 10px);
     }
 
     .flash-deals__container:first-child, .flash-deals__container:last-child
@@ -656,13 +653,14 @@
         grid-template-columns: auto;
         justify-content: center;
         align-items: center;
-        padding: var(--side-sub-padding);
+        padding: 30px var(--side-sub-padding);
     }
 
     .flash-deals__container
     {
         justify-content: center;
         align-items: center;
+        padding: 0;
     }
 
     .flash-deals__title
@@ -764,7 +762,7 @@
 {
     .how-does-it-work
     {
-        padding: 20px calc(var(--side-small-padding) * 2);
+        padding: 40px calc(var(--side-small-padding) * 2);
     }
 
     .how-does-it-work__heading
@@ -788,7 +786,7 @@
 {
     .how-does-it-work
     {
-        padding: 20px calc(var(--side-sub-padding) * 2);
+        padding: 30px calc(var(--side-sub-padding) * 2);
     }
 
     .how-does-it-work__heading
@@ -934,7 +932,7 @@
 {
     .popular-items
     {
-        padding: 20px calc(var(--side-small-padding) - 10px);
+        padding: 40px calc(var(--side-small-padding) - 10px);
     }
 
     .popular-items__heading
@@ -957,7 +955,7 @@
 {
     .popular-items
     {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     .popular-items__slider--button-left
@@ -1126,7 +1124,7 @@
 {
     .featured-restaurants
     {
-        padding: 20px calc(var(--side-small-padding) - 10px);
+        padding: 40px calc(var(--side-small-padding) - 10px);
     }
 
     .featured-restaurants__heading
@@ -1144,7 +1142,7 @@
 {
     .featured-restaurants
     {
-        padding: 20px calc(var(--side-sub-padding));
+        padding: 30px calc(var(--side-sub-padding));
     }
 
     .featured-restaurants__grid-container
@@ -1275,7 +1273,7 @@
 {
     .search-by-food
     {
-        padding: 20px calc(var(--side-small-padding) - 20px);
+        padding: 40px calc(var(--side-small-padding) - 20px);
     }
 
     .search-by-food__container
@@ -1293,7 +1291,7 @@
 {
     .search-by-food
     {
-        padding: 20px calc(var(--side-sub-padding) - 10px);
+        padding: 30px calc(var(--side-sub-padding) - 10px);
     }
 
     .search-by-food__heading
@@ -1313,7 +1311,7 @@
 
     .search-by-food__container img
     {
-        width: 50%;
+        width: 60%;
     }
 
     .search-by-food__heading
@@ -1470,7 +1468,6 @@
 
 .download-app__content
 {
-    width: 50%;
     align-self: center;
     z-index: 2;
     margin: 0 0 80px 80px;
@@ -1729,7 +1726,7 @@
 {
     .details
     {
-        padding: 20px var(--side-small-padding);
+        padding: 40px var(--side-small-padding);
     }
 
     .details__container
@@ -1780,7 +1777,7 @@
 {
     .details
     {
-        padding: 20px var(--side-sub-padding);
+        padding: 30px var(--side-sub-padding);
     }
 
     .details__title
@@ -1855,7 +1852,7 @@
 {
     .call-to-action
     {
-        padding: 20px var(--side-small-padding);
+        padding: 40px var(--side-small-padding);
     }
 
     .call-to-action__heading
@@ -1873,7 +1870,7 @@
 {
     .call-to-action
     {
-        padding: 20px var(--side-sub-padding);
+        padding: 30px var(--side-sub-padding);
     }
 
     .call-to-action__heading
@@ -2110,7 +2107,7 @@ footer hr
 {
     footer
     {
-        padding: 20px var(--side-small-padding);
+        padding: 40px var(--side-small-padding);
     }
 
     .footer__middle
@@ -2140,7 +2137,7 @@ footer hr
 {
     footer
     {
-        padding: 20px var(--side-sub-padding);
+        padding: 30px var(--side-sub-padding);
     }
 
     .footer__cities--name, .footer__link-set--heading, .footer__link-set--name
