@@ -1812,15 +1812,19 @@ footer hr
     text-align: left;
     color: rgba(245, 245, 245, 1);
     opacity: 0.31;
+}
+
+.footer__icons a
+{
     margin: 0 5px;
 }
 
-.footer__icons em:first-child
+.footer__icons a:first-child
 {
     margin: 0 5px 0 0;
 }
 
-.footer__icons em:last-child
+.footer__icons em a:last-child
 {
     margin: 0 0 0 5px;
 }
