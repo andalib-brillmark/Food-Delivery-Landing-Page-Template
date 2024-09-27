@@ -1331,12 +1331,17 @@
         margin: 5px 0;
         text-align: center;
     }
+
+    .search-by-food__slider-buttons
+    {
+        position: absolute;
+    }
 }
 
 /********** Features ***********/
 .features
 {
-    padding: 80px  calc(var(--side-padding) * 2);
+    padding: 120px  calc(var(--side-padding) * 2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1393,6 +1398,7 @@
     {
         flex-direction: column;
         width: 80%;
+        box-shadow: 0px 14px 15px 0px rgba(255, 174, 0, 0.28), 0px 14px 15px 0px rgba(255, 174, 0, 0.01);
     }
 
     .features__line
@@ -1433,6 +1439,192 @@
     .features__title
     {
         font-size: 18px;
+    }
+}
+
+/********** Download ***********/
+
+.download-app
+{
+    padding: 40px  calc(var(--side-padding) * 2) 0 calc(var(--side-padding) * 2);
+
+    background-color: rgba(254, 239, 208, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+.download-app__background
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.download-app__main
+{
+    width: 50%;
+    z-index: 2;
+}
+
+.download-app__content
+{
+    width: 50%;
+    align-self: center;
+    z-index: 2;
+    margin: 0 0 80px 80px;
+}
+
+.download-app__heading
+{
+    font-family: var(--source-sans-pro);
+    font-size: 60px;
+    font-weight: 700;
+    text-align: left;
+    background-image: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
+    background-clip: text;
+    color: transparent;
+}
+
+.download-app__description
+{
+    font-family: var(--open-sans);
+    color: #827E7E;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 60px 0;
+}
+
+.download-app__button-container
+{
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.download-app__button
+{
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px 0px #FFAE001A, 0px 20px 40px 0px #FFAE001D;
+    box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+}
+
+.download-app__button:first-child
+{
+    margin: 0 10px 0 0;
+}
+
+.download-app__button:last-child
+{
+    margin: 0 0 0 10px;
+}
+
+.download-app__button--text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 0 0 10px;
+}
+
+.download-app__button--text img:first-child
+{
+    margin: 0 0 5px 0;
+}
+
+.download-app__button--text img:last-child
+{
+    margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 1090px)
+{
+    .download-app
+    {
+        padding: 20px calc(var(--side-small-padding) * 2) 0 calc(var(--side-small-padding) * 2);
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .download-app__main
+    {
+        width: 80%;
+        margin: 20px 0 0 0;
+    }
+
+    .download-app__content
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 20px 0;
+    }
+
+    .download-app__heading
+    {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .download-app__description
+    {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .download-app
+    {
+        padding: 20px 20px 0 20px;
+    }
+
+    .download-app__button-container
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .download-app__description
+    {
+        width: 80%;
+    }
+
+    .download-app__description br
+    {
+        display: none;
+    }
+
+    .download-app__button
+    {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .download-app__button:first-child
+    {
+        margin: 0 0 10px 0;
+    }
+    
+    .download-app__button:last-child
+    {
+        margin: 10px 0 0 0;
     }
 }
 
@@ -1841,7 +2033,6 @@ footer hr
 
 .footer__input
 {
-    position: relative;
     margin: 0 0 30px 0;
 }
 
@@ -2029,6 +2220,7 @@ footer hr
         justify-content: center;
         align-items: center;
         margin: 0;
+        width: 100%;
     }
 
     .footer__input--field
@@ -2039,6 +2231,7 @@ footer hr
     .footer__input--button
     {
         margin: 20px 0 0 0;
+        width: 100%;
     }
 
     .footer__bottom
