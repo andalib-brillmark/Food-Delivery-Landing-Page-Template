@@ -1365,6 +1365,7 @@
     width: 2px;
     height: 96px;
     background-color: rgba(207, 207, 207, 1);
+    margin: 0 10px;
 }
 
 .features__content
