@@ -1751,9 +1751,10 @@ footer hr
     color: rgba(245, 245, 245, 1);
 }
 
-.footer__link-set--name a:hover
+.footer__link-set--name a:hover, .footer__icons em:hover
 {
     color: rgba(255, 179, 14, 1);
+    opacity: 1;
 }
 
 .footer__top--heading, .footer__link-set--heading
@@ -1872,6 +1873,7 @@ footer hr
     text-align: center;
     color: rgba(255, 255, 255, 1);
     margin: 0 0 0 10px;
+    cursor: pointer;
 }
 
 .footer__bottom
